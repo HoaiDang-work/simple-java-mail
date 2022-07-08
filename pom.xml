@@ -126,16 +126,16 @@
 
     <build>
         <plugins>
-            <plugin><!-- this plugin must come after jacoco instrument -->
-                <groupId>se.eris</groupId>
-                <artifactId>notnull-instrumenter-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <classes>**Assert</classes><!-- AssertJ generated -->
-                        <classes>**.ServerReply</classes><!-- somehow gets messed up -->
-                    </excludes>
-                </configuration>
-            </plugin>
+<!--            <plugin>&lt;!&ndash; this plugin must come after jacoco instrument &ndash;&gt;-->
+<!--                <groupId>se.eris</groupId>-->
+<!--                <artifactId>notnull-instrumenter-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <classes>**Assert</classes>&lt;!&ndash; AssertJ generated &ndash;&gt;-->
+<!--                        <classes>**.ServerReply</classes>&lt;!&ndash; somehow gets messed up &ndash;&gt;-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
