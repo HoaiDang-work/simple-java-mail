@@ -20,6 +20,7 @@ import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
 import java.util.Arrays;
 import java.util.List;
+import org.apache.commons.collections4.ListUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.simplejavamail.api.email.Email;
@@ -50,7 +51,7 @@ import static org.simplejavamail.internal.util.MiscUtil.valueNullOrEmpty;
  */
 public abstract class MimeMessageProducer {
 
-	protected static final List<String> HEADERS_TO_POPULATE_TO_CHILDREN = Arrays.asList("Content-Transfer-Encoding");
+	protected static final List<String> HEADERS_TO_POPULATE_TO_CHILDREN = ListUtils.unmodifiableList(Arrays.asList("Content-Transfer-Encoding"));
 
 	/**
 	 * @return Whether this mimemessage producer exactly matches the needs of the given email.
