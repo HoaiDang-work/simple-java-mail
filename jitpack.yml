@@ -1,0 +1,3 @@
+install:
+  - echo "Running custom install command"
+  - mvn clean deploy -DdeployAtEnd=true -DperformRelease=true -DskipTests -Dspotbugs.skip=true -Denforcer.skip=true -Djacoco.skip=true
